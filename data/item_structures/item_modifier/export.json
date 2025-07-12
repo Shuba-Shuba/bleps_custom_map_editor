@@ -1,0 +1,75 @@
+[
+  {
+    "function": "minecraft:set_lore",
+    "entity": "this",
+    "lore": [
+      [
+        {
+          "text":"Size: ",
+          "italic":false,
+          "color":"white"
+        },
+        {
+          "nbt":"save.size[0]",
+          "storage":"item_structures",
+          "color":"dark_aqua"
+        },
+        {
+          "text":",",
+          "color":"white"
+        },
+        {
+          "nbt":"save.size[1]",
+          "storage":"item_structures","color":"dark_aqua"
+        },
+        {
+          "text":",",
+          "color":"white"},
+          {"nbt":"save.size[2]",
+          "storage":"item_structures",
+          "color":"dark_aqua"
+        }
+      ]
+    ],
+    "mode": "replace_all"
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "text":"Use an anvil to name this map!",
+      "italic":false,
+      "color":"red",
+      "bold":true
+    },
+    "target": "item_name"
+  },
+  {
+    "function": "minecraft:copy_custom_data",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "minecraft:item_structures"
+    },
+    "ops": [
+      {
+        "source": "save",
+        "target": "structure",
+        "op": "merge"
+      }
+    ]
+  },
+  {
+    "function": "minecraft:copy_custom_data",
+    "source": {
+      "type": "minecraft:storage",
+      "source": "minecraft:bcm"
+    },
+    "ops": [
+      {
+        "source": "map",
+        "target": "bleps_map",
+        "op": "merge"
+      }
+    ]
+  }
+]

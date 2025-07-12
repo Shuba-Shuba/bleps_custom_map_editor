@@ -1,0 +1,6 @@
+{
+    "pack": {
+        "pack_format": 81,
+        "description": "Bleps custom map system using item structures, load this AFTER cw+shuba_item_structures"
+    }
+}
